@@ -1,0 +1,37 @@
+/* KanbanBoard.css */
+
+/* Estilo para o quadro Kanban */
+.kanban-board {
+    display: flex; /* Utiliza flexbox para organizar as colunas */
+    justify-content: space-between; /* Distribui as colunas com espaço entre elas */
+    padding: 10px;
+    height: 100vh; /* Define a altura do quadro para ocupar toda a tela */
+}
+
+/* Estilo para cada coluna */
+.column {
+    flex: 1; /* As colunas ocupam o mesmo espaço */
+    padding: 10px;
+    margin: 0 10px; /* Espaçamento entre colunas */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    overflow-y: auto; /* Permite rolagem vertical se necessário */
+}
+
+/* Estilo para títulos de colunas */
+.column h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Estilo para cada cartão */
+.task {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}

@@ -1,0 +1,21 @@
+/* Estilização do componente Task */
+.task {
+    padding: 10px;
+    margin: 5px;
+    background-color: #f5f5f5; /* Cor de fundo da tarefa */
+    border: 1px solid #ccc; /* Borda da tarefa */
+    border-radius: 4px; /* Cantos arredondados */
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+    cursor: move; /* Cursor de movimento para indicar que a tarefa pode ser arrastada */
+    transition: background-color 0.2s ease-in-out; /* Transição suave de cor de fundo */
+}
+
+/* Estilização para a tarefa quando está sendo arrastada */
+.task-dragging {
+    opacity: 0.5; /* Reduz a opacidade quando a tarefa está sendo arrastada */
+}
+
+/* Adicionalmente, você pode adicionar estilizações para outras interações */
+.task:hover {
+    background-color: #e0e0e0; /* Muda a cor de fundo ao passar o mouse */
+}

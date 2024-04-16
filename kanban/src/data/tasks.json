@@ -1,0 +1,24 @@
+  {
+      "tasks": [
+        {
+          "id": 1,
+          "title": "Tarefa 1",
+          "status": "A fazer"
+        },
+        {
+          "id": 2,
+          "title": "Tarefa 2",
+          "status": "Em andamento"
+        },
+        {
+          "id": 3,
+          "title": "Tarefa 3",
+          "status": "Concluido"
+        },
+        {
+          "id": 4,
+          "title": "Tarefa 4",
+          "status": "Em andamento"    
+        }
+      ]
+    }
