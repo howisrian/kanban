@@ -1,27 +1,37 @@
 import React from 'react';
 import { useDrag } from 'react-dnd';
-import { ITEM_TYPE } from './ItemTypes'; // Importe a definição de ItemTypes de um arquivo separado
-import './styles/Task.css'; // Importe o arquivo de estilos para a tarefa
 
-function Task({ task }) {
-    // Use o hook useDrag para permitir arrastar a tarefa
+function Task({ task, moveTask }) {
+    // Configure o arrastar para a tarefa
     const [{ isDragging }, drag] = useDrag({
-        type: ITEM_TYPE,
-        item: { id: task.id }, // Passa o ID da tarefa para a função de drop
+        type: 'TASK',
+        item: {
+            id: task.id, // O identificador da tarefa
+            status: task.status, // O status atual da tarefa
+        },
         collect: (monitor) => ({
             isDragging: monitor.isDragging(),
         }),
     });
 
+    // Defina o estilo para a tarefa arrastada
+    const taskStyle = {
+        opacity: isDragging ? 0.5 : 1,
+        cursor: 'move',
+        border: '1px solid #ccc',
+        padding: '8px',
+        marginBottom: '8px',
+        borderRadius: '4px',
+        backgroundColor: '#f9f9f9',
+    };
+
+    // Renderize o card da tarefa
     return (
-        <div
-            ref={drag} // Atribua o ref de arrastar ao elemento div
-            className={`task ${isDragging ? 'is-dragging' : ''}`}
-        >
+        <div ref={drag} style={taskStyle}>
             <h4>{task.title}</h4>
+            {/* Outros detalhes da tarefa podem ser exibidos aqui */}
         </div>
     );
 }
-
 
 export default Task;
